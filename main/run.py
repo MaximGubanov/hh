@@ -3,6 +3,7 @@ from session import Session
 
 
 if __name__ == '__main__':
+    print('Запуск сессии... ')
 
     session = Session()
 
