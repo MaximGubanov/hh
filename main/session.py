@@ -34,8 +34,8 @@ class Session:
                         else:
                             print('Новых вакансий пока нет')
                         print('Ожидаем новый запрос вакансий... ', datetime.now())
-                        sleep(300)
-                        period_time = datetime.now() - timedelta(minutes=5)
+                        sleep(1800)
+                        period_time = datetime.now() - timedelta(minutes=30)
                         data_to_send['date_from'] = period_time.strftime("%Y-%m-%dT%H:%m:00")
                     else:
                         print('Ожидаем новый токен...')
