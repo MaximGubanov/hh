@@ -34,9 +34,9 @@ class Session:
                         else:
                             print('Новых вакансий пока нет')
                         print('Ожидаем новый запрос вакансий... ', datetime.now())
-                        sleep(1800)
-                        period_time = datetime.now() - timedelta(minutes=30)
-                        data_to_send['date_from'] = period_time.strftime("%Y-%m-%dT%H:%m:00")
+                        sleep(self.config.QUERY_INTERVAL)
+                        query_interval = datetime.now() - timedelta(seconds=self.config.QUERY_INTERVAL)
+                        data_to_send['date_from'] = query_interval.strftime("%Y-%m-%dT%H:%M:%S")
                     else:
                         print('Ожидаем новый токен...')
                         sleep(300)
@@ -46,4 +46,4 @@ class Session:
                     print(error)
                     exit()
         except Exception as error:
-            print("Ошибка получения токена: ", error)
+            print("Ошибка получения токена, попробуйте позже: \n", error)

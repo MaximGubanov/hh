@@ -16,10 +16,12 @@ class Config:
             self.BASE_URL = 'https://api.hh.ru/'
             self.AUTH_URL = 'https://hh.ru/oauth/token'
             self.UTF = 'utf-8'
+            self.QUERY_INTERVAL = 1800
 
             self.HEADERS = {
                 'User Agent':
-                    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+                    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                    'Chrome/103.0.0.0 Safari/537.36',
                 'Content-Type': 'application/x-www-form-urlencoded',
             }
 

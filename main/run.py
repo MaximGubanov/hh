@@ -3,14 +3,15 @@ from session import Session
 
 
 if __name__ == '__main__':
-    print('Запуск сессии... ')
+    print(f'[ START SESSION {datetime.now().strftime("%Y-%m-%d %H:%M:%S")} ]')
 
     session = Session()
 
     data = {
-        'text': 'Python, Django, DRF',
+        'text': 'python AND ((drf OR restframework) OR django OR backend)',
         'date_from': datetime.now().strftime("%Y-%m-%dT00:00:00"),
-        'area': ['66'],
+        # 'date_from': '2022-07-01T00:00:00',
+        'area': ['66', '1'],  # поиск по Нижнему Новгороду
     }
 
     session.run(data_to_send=data)
