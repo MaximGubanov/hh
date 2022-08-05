@@ -10,7 +10,6 @@ if __name__ == '__main__':
     data = {
         'text': 'python AND ((drf OR restframework) OR django OR backend)',
         'date_from': datetime.now().strftime("%Y-%m-%dT00:00:00"),
-        # 'date_from': '2022-07-01T00:00:00',
         'area': ['66', '1'],  # поиск по Нижнему Новгороду
     }
 
