@@ -22,7 +22,6 @@ class Session:
                     if hhtoken:
                         print(hhtoken, status)
                         vacancies = request.get_data(hhtoken=hhtoken, data=data_to_send)
-                        print(vacancies)
                         if vacancies['found'] != 0:
                             for vac in vacancies['items']:
                                 if vac['alternate_url']:
